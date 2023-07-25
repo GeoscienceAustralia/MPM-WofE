@@ -1,6 +1,6 @@
 #WofE - Area Under the Curve Tool
 #@author Arianne Ford, Geoscience Australia
-#Based on ArcSDM Weights of Evidence (Area-Frequency) tool
+#Based on ArcSDM Weights of Evidence (Area-Frequency) tool (https://github.com/gtkfi/ArcSDM)
 
 #get required packages for processing
 library(modEvA)
