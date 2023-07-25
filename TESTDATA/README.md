@@ -20,7 +20,7 @@ The binary maps in the Calculate Response folder use the following thresholds:
 * Fault Density.tif - Class 10-6 (0.371 - 0.186 faults/km2)
 * StratNo.tif - StratNo = 76890 or 42515 or 31441 or 26091 or 12754 or 11361 or 7245 ()
 
-The weights tables have been regenerated for the binary maps using the categorical calculation type, because the binary values are now unordered.
+Thresholds for the maps used in Calculate Response have been manually selected as the statistically derived thresholds from Calculate Weights correspond to an area that is too large to be meaningful for the study area. The weights tables have been regenerated for the binary maps using the categorical calculation type, because the binary values are now unordered.
 
 ### Calculate AUC
 The map in the Calculate AUC folder is the posterior probability (mineral potential) map generated from the Calculate Response script using the 4 binary input maps described above. For the purposes of the test data, the mineral deposits and occurrences have not been subset into training and validation sets.
