@@ -1,6 +1,6 @@
 # Test Data for WofE R scripts
 
-Please store files in a folder path that does not contain any spaces in the pathname!
+Please ensure there are no spaces in either folder or file pathnames!
 
 ## Test Maps
 ### Calculate Weights
