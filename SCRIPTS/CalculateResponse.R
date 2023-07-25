@@ -1,6 +1,6 @@
 #WofE - Calculate Weights Tool
 #@author Arianne Ford, Geoscience Australia
-#Based on ArcSDM Weights of Evidence toolbox
+#Based on ArcSDM Weights of Evidence toolbox (https://github.com/gtkfi/ArcSDM)
 
 #get required packages for processing
 require(tcltk)
