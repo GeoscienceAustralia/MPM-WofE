@@ -4,9 +4,9 @@ Weights of evidence (WofE) is a data-driven method for mineral potential mapping
 
 Three R scripts have been developed as part of Geoscience Australia's Exploring for the Future program. Geoscience Australia’s Exploring for the Future program provides precompetitive information to inform decision-making by government, community, and industry on the sustainable development of Australia's mineral, energy, and groundwater resources. By gathering, analysing, and interpreting new and existing precompetitive geoscience data and knowledge, we are building a national picture of Australia’s geology and resource potential. This leads to a strong economy, resilient society and sustainable environment for the benefit of all Australians. This includes supporting Australia’s transition to net zero emissions, strong, sustainable resources and agriculture sectors, and economic opportunities and social benefits for Australia’s regional and remote communities. The Exploring for the Future program, which commenced in 2016, is an eight year, $225m investment by the Australian Government.
 
-Based on the ArcSDM toolbox for ArcGIS Pro (https://github.com/gtkfi/ArcSDM), three R scripts have been developed that replicate the Calculate Weights, Calculate Response, and Area-Frequency tools within the Weights of Evidence toolbox. The R scripts have been developed in order to remove the dependency on ArcGIS and the Spatial Analyst toolbox.
+Based on the ArcSDM toolbox for ArcGIS Pro (https://github.com/gtkfi/ArcSDM), three R scripts have been developed that replicate the Calculate Weights, Calculate Response, and Area-Frequency tools within the Weights of Evidence toolbox. The R scripts have been developed in order to remove the dependency on licenses for ArcGIS and the Spatial Analyst toolbox.
 
-Calculate Weights evaluates the Contrast and Studentized contrast values for each map value and indicates where the optimal threshold occurs using the GEN_CLASS field. It is up to the user to determine if that threshold is geologically meaningful, and manually change it if required.
+Calculate Weights evaluates the Contrast and Studentized contrast values for each map value and indicates where the optimal threshold occurs using the GEN_CLASS field. It is up to the user to determine if that threshold is geologically meaningful, and manually change it if required. Test data supplied has manually selected thresholds for the maps used in Calculate Response.
 
 Calculate Response generates the mineral potential map for a user specified number of input maps and their corresponding weights tables from the Calculate Weights tool. The script also produces a corresponding standard deviation and confidence map.
 
@@ -26,7 +26,9 @@ The scripts have been developed in R Studio 2022.02.2 (Build 485) using the foll
 * pROC (1.18.0)
 
 # Running
-If running scripts in R Studio, please check "Source on Save" button.
+If running scripts in R Studio, please check "Source on Save" button to ensure script reads in any user input correctly.
+
+Please ensure that there are no spaces in either folder pathnames or file pathnames. Currently scripts throw an error if a space is encountered in pathnames. 
 
 ## Calculate Weights
 * Calculate Weights requires a Geotiff file (must be Integer type) that represents the map to be tested and a shapefile containing the known mineral deposits/occurrrences. Both the Geotiff and shapefile must be in the same coordinate system. The script assumes a projected coordinate system in meters.
