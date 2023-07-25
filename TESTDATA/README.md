@@ -3,6 +3,8 @@
 Please ensure there are no spaces in either folder or file pathnames!
 
 ## Test Maps
+Note that all input maps have been generated in ArcGIS Pro, however any software package can be used as long as the input maps for the Calculate Weights and Calculate Response tools are Geotiff files with an integer data type.
+
 ### Calculate Weights
 Four maps have been derived over the Cloncurry IOCG district based on data in: 
 * Stewart, A.J., Liu, S.F., Highet, L.M., Woods, M., Czarnota, K., Bonnardot, M., Brown, C., Clark, A., Connors, K. 2020. Solid Geology of the North Australian Craton, 1:1 000 000 scale, 1st edition (2020). Geoscience Australia, Canberra. https://dx.doi.org/10.26186/135277
@@ -23,7 +25,7 @@ The binary maps in the Calculate Response folder use the following thresholds:
 Thresholds for the maps used in Calculate Response have been manually selected as the statistically derived thresholds from Calculate Weights correspond to an area that is too large to be meaningful for the study area. The weights tables have been regenerated for the binary maps using the categorical calculation type, because the binary values are now unordered.
 
 ### Calculate AUC
-The map in the Calculate AUC folder is the posterior probability (mineral potential) map generated from the Calculate Response script using the 4 binary input maps described above. For the purposes of the test data, the mineral deposits and occurrences have not been subset into training and validation sets.
+The map in the Calculate AUC folder is the posterior probability (mineral potential) map generated from the Calculate Response script using the 4 binary input maps described above. For the purposes of the test data, the mineral deposits and occurrences have not been subset into training and validation sets. Note that any maps used as input for this tool must be scaled 0-1. Values outside this range will be ignored and likely throw an error.
 
 ## Training Data
 The IOCG mineral deposits and occurrences used for testing and validating the maps have been derived from the following datasets:
