@@ -26,6 +26,7 @@ The scripts have been developed in R Studio 2022.02.2 (Build 485) using the foll
 * pROC (1.18.0)
 
 # Running
+If running scripts in R Studio, please check "Source on Save" button.
 
 ## Calculate Weights
 * Calculate Weights requires a Geotiff file (must be Integer type) that represents the map to be tested and a shapefile containing the known mineral deposits/occurrrences. Both the Geotiff and shapefile must be in the same coordinate system. The script assumes a projected coordinate system in meters.
