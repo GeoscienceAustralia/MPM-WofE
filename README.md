@@ -51,5 +51,5 @@ Please ensure that there are no spaces in either folder pathnames or file pathna
 	* Confidence in posterior probability - posterior probability/standard deviation of posterior probability
 
 ## Calculate AUC
-* Calculate AUC requires an input Geotiff file (on a 0-1 probability scale) that represents the map to be tested and a shapefile containing the known mineral deposits/occurrences. Both the Geotiff and shapefile must be in the same coordinate system.
+* Calculate AUC requires an input Geotiff file (on a 0-1 probability scale) that represents the map to be tested and a shapefile containing the known mineral deposits/occurrences. If the map to be tested contains values outside the 0-1 range, please transform the values and save to new Geotiff file prior to using as input for this script. Both the Geotiff and shapefile must be in the same coordinate system.
 * The script outputs the Receiver-Operating Characteristic curve with the corresponding Area Under the Curve value. A csv file is also produced that contains statistics relevant to the AUC calculations.
