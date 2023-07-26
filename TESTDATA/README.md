@@ -2,8 +2,17 @@
 
 Please ensure there are no spaces in either folder or file pathnames!
 
+## Mineral Deposit and Occurrence Data
+The IOCG mineral deposits and occurrences used for testing and validating the maps have been derived from the following datasets:
+* Huston, D., Doublier, M., Downes, P.M. 2021. Geological setting, age and endowment of major Australian mineral deposits - a compilation. Geoscience Australia, Canberra. http://dx.doi.org/10.11636/Record.2021.020
+* Kucka, C., Senior, A., Britt, A. 2022. Mineral Occurrences: Forgotten discoveries providing new leads for mineral supply. Geoscience Australia, Canberra. https://dx.doi.org/10.26186/146983
+
+Note that the mineral occurrences have not been subset into training and validation sets in the Test Data. It is up to the user to determine how they wish to do this.
+
 ## Test Maps
-Note that all input maps have been generated in ArcGIS Pro, however any software package can be used as long as the input maps for the Calculate Weights and Calculate Response tools are Geotiff files with an integer data type.
+All input maps have been generated in ArcGIS Pro, however any software package can be used as long as the input maps for the Calculate Weights and Calculate Response tools are Geotiff files with an integer data type and the input map for the Calculate AUC tool contains only values in the 0-1 range.
+
+Maps have been generated for example purposes only and should not be interpreted as the most effective targeting criteria for the mineral system.
 
 ### Calculate Weights
 Four maps have been derived over the Cloncurry IOCG district based on data in: 
@@ -20,14 +29,9 @@ The binary maps in the Calculate Response folder use the following thresholds:
 * Dist2Breccia.tif - 5km distance buffer
 * Dist2Fault.tif - 2km distance buffer
 * Fault Density.tif - Class 10-6 (0.371 - 0.186 faults/km2)
-* StratNo.tif - StratNo = 76890 or 42515 or 31441 or 26091 or 12754 or 11361 or 7245 ()
+* StratNo.tif - StratNo = 76890 or 42515 or 31441 or 26091 or 12754 or 11361 or 7245 (Wiggle Waterhole Metagabbro, Boomarra Metamorphics, Milo beds, Overhang Jaspilite, Mount Godkin Granite, Marraba Volcanics, Gin Creek Granite)
 
-Thresholds for the maps used in Calculate Response have been manually selected as the statistically derived thresholds from Calculate Weights correspond to an area that is too large to be meaningful for the study area. The weights tables have been regenerated for the binary maps using the categorical calculation type, because the binary values are now unordered.
+Thresholds for the maps used in Calculate Response have been manually selected as the statistically derived thresholds from Calculate Weights correspond to an area that is too large to be meaningful for the study area. The weights tables have been regenerated for the binary maps using the categorical calculation type, because the binary values are now unordered. 
 
 ### Calculate AUC
 The map in the Calculate AUC folder is the posterior probability (mineral potential) map generated from the Calculate Response script using the 4 binary input maps described above. For the purposes of the test data, the mineral deposits and occurrences have not been subset into training and validation sets. Note that any maps used as input for this tool must be scaled 0-1. Values outside this range will be ignored and likely throw an error.
-
-## Training Data
-The IOCG mineral deposits and occurrences used for testing and validating the maps have been derived from the following datasets:
-* Huston, D., Doublier, M., Downes, P.M. 2021. Geological setting, age and endowment of major Australian mineral deposits - a compilation. Geoscience Australia, Canberra. http://dx.doi.org/10.11636/Record.2021.020
-* Kucka, C., Senior, A., Britt, A. 2022. Mineral Occurrences: Forgotten discoveries providing new leads for mineral supply. Geoscience Australia, Canberra. https://dx.doi.org/10.26186/146983
